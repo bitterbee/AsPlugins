@@ -1,0 +1,4 @@
+run-as ${package_name}
+cd ${phone_xlog_dir_path}
+ls
+exit

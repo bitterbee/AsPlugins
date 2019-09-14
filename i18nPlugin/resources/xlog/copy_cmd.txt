@@ -1,0 +1,3 @@
+run-as ${package_name}
+cat ${xlog_copy_from_path} > ${xlog_copy_to_path}
+exit

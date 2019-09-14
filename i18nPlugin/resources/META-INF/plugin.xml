@@ -1,0 +1,69 @@
+<idea-plugin version="2">
+    <id>com.ss.android.lark.plugins</id>
+    <name>EE-Tools</name>
+    <version>1.0</version>
+    <vendor email="zhangyunlong.06@bytedance.com" url="http://www.bytedance.com">ByteDance</vendor>
+
+    <description>
+        1. 插件执行 i18n_client
+        2. 图片更新管理
+    </description>
+
+    <change-notes>
+
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+
+        <group id="zyl06.bytedance.tools" class="com.ss.lark.tools.EEToolsGroup" text="EETools" popup="true">
+            <add-to-group group-id="EditMenu" anchor="first"/>
+
+            <action id="zyl06.bytedance.tools.i18n_plugin"
+                    class="com.ss.lark.tools.actions.i18n.I18nAction"
+                    text="i18n"
+                    icon="/res/i18n_icon.png"
+                    description="The action is used to ee android programmers to update i18n string">
+                <add-to-group group-id="MainToolBar" anchor="last"/>
+            </action>
+
+            <action id="zyl06.bytedance.tools.img_update_plugin"
+                    class="com.ss.lark.tools.actions.img_update.ImageUpdateAction"
+                    text="ImageUpdate"
+                    icon="/res/image_update_icon.png"
+                    description="The action is used to ee android programmers to update images">
+                <add-to-group group-id="MainToolBar" anchor="last"/>
+            </action>
+
+            <action id="zyl06.bytedance.tools.del_build_plugin"
+                    class="com.ss.lark.tools.actions.delete_build.DelBuildAction"
+                    text="DelBuild"
+                    icon="/res/clean_build_icon.png"
+                    description="The action is used to delete build folders">
+                <add-to-group group-id="MainToolBar" anchor="last"/>
+            </action>
+
+            <action id="zyl06.bytedance.tools.view_xlog"
+                    class="com.ss.lark.tools.actions.xlog.ViewXlogAction"
+                    text="ViewXlog"
+                    icon="/res/xlog_icon.png"
+                    description="The action is used to show xlog from phone">
+                <add-to-group group-id="MainToolBar" anchor="last"/>
+            </action>
+        </group>
+
+    </actions>
+
+</idea-plugin>
